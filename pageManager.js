@@ -2,6 +2,7 @@ $(document).ready(function () {
     var usrSelect
 
     $('.menuButton').click(function () {
+
         $(menu).hide('slow');
 
         usrSelect = $(this).attr('id');
@@ -18,11 +19,16 @@ $(document).ready(function () {
         }
 
         $(puzzle).fadeTo('slow', 1);
-        console.log(usrSelect);
     });
 
     $('.solveButton').click(function () {
+        var imgHeight, imgWidth;
+
         $(puzzle).fadeTo('slow', 0.5);
+        imgHeight = $(jqslider).height() - 50;
+        imgWidth = $(jqslider).width() - 50;
+
+        $(explanation).width(imgWidth).height(imgHeight);
         $(playAgain).fadeTo('slow', 1);
     });
 

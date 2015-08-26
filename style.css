@@ -9,12 +9,19 @@ and open the template in the editor.
 */
 
 body {
-    width: 1000px;
     background: #002f49;
     text-align: center;
-    margin: auto;
     color: #ffb400
 
+}
+
+#container {
+    position: relative;
+    width: 1000px;
+    margin: auto;
+/*
+    background-color: rgba(255,255,255,0.3);
+*/
 }
 
 div.menuButton, div.endButton {
@@ -27,11 +34,15 @@ div.menuButton, div.endButton {
     margin: 15px auto;
 }
 
-#explanation p {
+#explanation {
     background-color: rgba(255, 255, 255, 0.7);
     float: right;
     margin-right: 3em;
     color: black;
+    position: absolute;
+    text-align: center;
+    padding: 20px;
+    top: 50px;
 }
 
 #puzzle {
