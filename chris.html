@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Testing Menu Buttons</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	    $("#lm").click(function(){
+    	    $("#easy").fadeIn("slow");
+        	$("#medium").fadeIn("slow");
+        	$("#hard").fadeIn("slow");
+        	$("#lm").fadeOut("fast");
+        	$("#animal").fadeOut("fast");
+        	$("#figures").fadeOut("fast");
+    	});
+	})
+
+	$(document).ready(function(){
+    	$("#animal").click(function(){
+        	$("#easy").fadeIn("slow");
+        	$("#medium").fadeIn("slow");
+        	$("#hard").fadeIn("slow");
+        	$("#lm").fadeOut("fast");
+        	$("#animal").fadeOut("fast");
+        	$("#figures").fadeOut("fast");
+    	});
+	})
+
+		$(document).ready(function(){
+    	$("#figures").click(function(){
+        	$("#easy").fadeIn("slow");
+        	$("#medium").fadeIn("slow");
+        	$("#hard").fadeIn("slow");
+        	$("#lm").fadeOut("fast");
+        	$("#animal").fadeOut("fast");
+        	$("#figures").fadeOut("fast");
+    	});
+	})
+	</script>
+    <style>
+    #topic {
+    	position:fixed;
+
+    	}
+    </style>
+	</head>
+	<body>
+		<h1>Testing Menu Buttons</h1>
+		<div>
+			<div id="topic">
+				<button id="lm" >Landmarks</button><br><br>
+				<button id="animal">Animals</button><br><br>
+				<button id="figures">Historical Figures</button><br><br>
+			</div>
+			<div id="difficulty">
+				<input type="button" id="easy" value="Easy" style=display:none></button> <br><br>
+				<input type="button" id="medium" value="Medium" style=display:none></button> <br><br>
+				<input type="button" id="hard" value="Hard" style=display:none></button> <br><br>
+			</div>
+		</div>
+	</body>
+</html>
