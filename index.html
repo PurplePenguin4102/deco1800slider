@@ -16,24 +16,30 @@ Organisation: Team Jigglypuff
         <link type="stylesheet/css" rel="stylesheet" href="./style.css">
     </head>
     <body>
+
         <header>
             <h1>AuSlider</h1>
         </header>
+
         <section id="menu">
         <div>
             <p>Welcome to Auslider. Please select difficulty and category</p>
-            <div class="button">Animals</div>
-            <div class="button">Politicians</div>
-            <div class="button">Landmarks</div>
+            <div id="animals" class="menuButton">Animals</div>
+            <div id="politicians" class="menuButton">Politicians</div>
+            <div id="landmarks" class="menuButton">Landmarks</div>
         </div>
         </section>
+
         <section id="puzzle">
-            <canvas id="slider"></canvas>
-            <div class="button">Solve</div>
+            <img id="jqslider">
+            <div class="solveButton solve">Solve</div>
         </section>
+
         <section id="playAgain">
             <div id="explanation"></div>
+            <div class="endButton again">Play Again?</div>
         </section>
+
         <footer>
             <div>AuSlider &copy; Jacob Eldridge, Chris Mellor, Joseph Ray, Chai Latte.</div>
         </footer>
