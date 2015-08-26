@@ -10,14 +10,16 @@ and open the template in the editor.
 
 body {
     width: 1000px;
-    background: green;
+    background: #002f49;
     text-align: center;
     margin: auto;
+    color: #ffb400
+
 }
 
 div.menuButton, div.endButton {
     width: 200px;
-    background-color: greenyellow;
+    background-color: #c30d36;
     border-radius: 50px;
     border: solid 2px gold;
     font-size: 24px;
