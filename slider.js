@@ -1,5 +1,6 @@
 function init_slider(image) {
   //turn the DOM element image into a sliding puzzle
+  image.jqPuzzle();
 }
 
 function mix_slider(image) {
@@ -21,4 +22,9 @@ function start_clock() {
 
 function play_slider() {
   
+}
+
+function kill_slider(slider) {
+    slider.remove();
+    $('#puzzle').append('<img id=slider>');
 }

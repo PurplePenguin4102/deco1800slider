@@ -3,6 +3,7 @@ function hello() {
 }
 
 function trove_search(searchStr) {
+/*
     var n = 5;
     var s = 1 + Math.floor(Math.random() * 500);
     var enc = "&encoding=json";
@@ -17,6 +18,7 @@ function trove_search(searchStr) {
     console.log(fullURL);
     $.getJSON(fullURL, function( data ) { alert( "Data loaded: ");
     });
+*/
 }
 
 function dump_asset(jsonObj) {

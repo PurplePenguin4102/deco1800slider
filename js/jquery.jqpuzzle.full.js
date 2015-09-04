@@ -11,11 +11,11 @@ $.fn.jqPuzzle = function(settings, texts) {
 	// default settings
 	var defaults = {
 		
-		rows: 3, 					// number of rows [3 ... 9]
-		cols: 3,		 			// number of columns [3 ... 9]
-		hole: 9,					// initial hole position [1 ... rows*columns]
+		rows: 4, 					// number of rows [3 ... 9]
+		cols: 4,		 			// number of columns [3 ... 9]
+		hole: 16,					// initial hole position [1 ... rows*columns]
 		shuffle: false,				// initially show shuffled pieces [true|false]
-		numbers: false,				// initially show numbers on pieces [true|false]
+		numbers: true,				// initially show numbers on pieces [true|false]
 		language: 'en',				// language for gui elements [language code]
 		
 		// display additional gui controls
@@ -741,8 +741,8 @@ $.fn.jqPuzzle = function(settings, texts) {
 			// attach events ---------------------------------------------------
 			
 			// prevent text selection
-			if($.browser.msie) $gui[0].onselectstart = function() { return false; };
-			else  $gui.mousedown(function() { return false; });
+			//if($.browser.msie) $gui[0].onselectstart = function() { return false; };
+			//else  $gui.mousedown(function() { return false; });
 			
 			// button press on mousedown
 			$buttons.mousedown(function() {

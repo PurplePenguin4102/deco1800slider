@@ -13,30 +13,30 @@ function start_game() {
 
     $(menu).hide('slow');
     usrSelect = $(this).attr('id');
-    troveResult = trove_search(usrSelect);
-    dump_asset(troveResult);
+    //troveResult = trove_search(usrSelect);
+    //dump_asset(troveResult);
 
     switch (usrSelect) {
         case "animals" :
-            $(jqslider).attr('src', "./assets/animals.jpg");
+            $("#slider").attr('src', "./assets/animals.jpg");
             break;
         case "politicians" :
-            $(jqslider).attr('src', "./assets/dickheads.jpg");
+            $("#slider").attr('src', "./assets/dickheads.jpg");
             break;
         case "landmarks" :
-            $(jqslider).attr('src', "./assets/landmarks.jpg");
+            $("#slider").attr('src', "./assets/landmarks.jpg");
             break;
         case "usr" :
-            $("#jqslider").attr('src', "./assets/usr.jpg");
+            $("#slider").attr('src', "./assets/usr.jpg");
             break;
     }
 
-    $("#jqslider").attr('src', "./assets/troveResult.jpg");
+    //$("#jqslider").attr('src', "./assets/troveResult.jpg");
 
     $(puzzle).fadeTo('slow', 1);
-
-    init_slider($("#jqslider"));
-    mix_slider($("#jqslider"));
+    console.log("hello");
+    init_slider($("#slider"));
+    mix_slider($("#slider"));
     start_clock();
     play_slider();
 }
@@ -45,8 +45,8 @@ function game_end() {
     var imgHeight, imgWidth;
 
     $(puzzle).fadeTo('slow', 0.5);
-    imgHeight = $(jqslider).height() - 50;
-    imgWidth = $(jqslider).width() - 50;
+    imgHeight = $("#slider").height() - 50;
+    imgWidth = $("#slider").width() - 50;
 
     $(explanation).width(imgWidth).height(imgHeight);
     $(playAgain).fadeTo('slow', 1);
@@ -56,4 +56,5 @@ function play_again() {
     $(puzzle).hide('slow');
     $(playAgain).hide('slow');
     $(menu).show('slow');
+    kill_slider($(".jqPuzzle"));
 }
