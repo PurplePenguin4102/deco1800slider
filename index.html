@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
 Authors: Jacob Eldridge, Chris Mellor, Joseph Ray, Mr No
-Organisation: Team Jigglypuff 
+Organisation: Team Jigglypuff
 -->
 <html>
     <head>
@@ -11,6 +11,7 @@ Organisation: Team Jigglypuff
 
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script type="text/javascript" src="./slider.js"></script>
+        <script type="text/javascript" src="./troveInterface.js"></script>
         <script type="text/javascript" src="./pageManager.js"></script>
 
         <link type="stylesheet/css" rel="stylesheet" href="./style.css">
@@ -18,9 +19,17 @@ Organisation: Team Jigglypuff
     <body>
         <div id="container">
             <header>
-                <h1>AuSlider</h1>
+                <h1 id="title">AuSlider</h1>
             </header>
-
+            <div id="options">
+                <div id="easy"></div>
+                <div id="medium"></div>
+                <div id="hard"></div>
+            </div>
+            <div id="highscore">
+                <canvas id="scoreArea">
+                <div id="update"></div>
+            </div>
             <section id="menu">
             <div>
                 <p>Welcome to Auslider. Please select difficulty and category</p>
@@ -41,7 +50,7 @@ Organisation: Team Jigglypuff
             </section>
 
             <footer>
-                <div>AuSlider &copy; Jacob Eldridge, Chris Mellor, Joseph Ray, Chai Latte.</div>
+                <div>AuSlider &copy; Jacob Eldridge, Chris Mellor, Joseph Ray, Chai No.</div>
             </footer>
         </div>
     </body>

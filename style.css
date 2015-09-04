@@ -32,6 +32,7 @@ div.menuButton, div.endButton {
     font-size: 24px;
     font-family: verdana;
     margin: 15px auto;
+    cursor: pointer;
 }
 
 #explanation {
@@ -50,5 +51,13 @@ div.menuButton, div.endButton {
 }
 
 #playAgain {
+    display: none;
+}
+
+#options {
+    display: none;
+}
+
+#highscore {
     display: none;
 }
