@@ -9,15 +9,14 @@ function trove_search(searchStr) {
     var zone = "&zone=picture";
     var aus = "&l-australia=y";
     var avail = "&l-availability=y/f";
-    var baseURL = "http://api.trove.nla.gov.au/result?"
-    var api = "toi7b0uo1lof3nue"
+    var baseURL = "http://api.trove.nla.gov.au/result?";
+    var api = "toi7b0uo1lof3nue";
     var fullURL = baseURL + "key=" + api + zone +
                   "&q=" + encodeURIComponent(searchStr) +
-                  "&n=" + n + "&s=" + s + enc;
+                  "&n=" + n + "&s=" + s + enc + "&callback?";
     console.log(fullURL);
-    jQuery.get(fullURL, function( data ) {
-        alert( "Data loaded: " + data);
-    }, "json" );
+    $.getJSON(fullURL, function( data ) { alert( "Data loaded: ");
+    });
 }
 
 function dump_asset(jsonObj) {
