@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var usrSelect
     var leaderboard
-    
+
     $('.menuButton').click(function () {
 
         $(menu).hide('slow');
@@ -9,14 +9,16 @@ $(document).ready(function () {
         usrSelect = $(this).attr('id');
         switch (usrSelect) {
             case "animals" :
-                $(jqslider).attr('src', "./animals.jpg");
+                $(jqslider).attr('src', "./assets/animals.jpg");
                 break;
             case "politicians" :
-                $(jqslider).attr('src', "./dickheads.jpg");
+                $(jqslider).attr('src', "./assets/dickheads.jpg");
                 break;
             case "landmarks" :
-                $(jqslider).attr('src', "./landmarks.jpg");
+                $(jqslider).attr('src', "./asets/landmarks.jpg");
                 break;
+            case "usr" :
+                $("#jqslider").attr('src', "./assets/usr.jpg");
         }
 
         $(puzzle).fadeTo('slow', 1);
