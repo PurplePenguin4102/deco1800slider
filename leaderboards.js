@@ -1,6 +1,7 @@
 function getScores() {
       //This function needs to be able to fetch a list of scores from
-      //leaderboard
+      //leaderboard and returns two lists (list of lists) containing names
+      //and scores
 }
 
 function queryBoard(var score) {

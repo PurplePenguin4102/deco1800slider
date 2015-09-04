@@ -1,6 +1,7 @@
 $(document).ready(function () {
     var usrSelect
-
+    var leaderboard
+    
     $('.menuButton').click(function () {
 
         $(menu).hide('slow');
