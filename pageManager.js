@@ -1,5 +1,3 @@
-//CODING RESTRUCTURRRREEEEE
-
 $(document).ready(main);
 
 function main () {
