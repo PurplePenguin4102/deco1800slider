@@ -11,11 +11,11 @@ $.fn.jqPuzzle = function(settings, texts) {
 	// default settings
 	var defaults = {
 		
-		rows: 4, 					// number of rows [3 ... 9]
-		cols: 4,		 			// number of columns [3 ... 9]
-		hole: 16,					// initial hole position [1 ... rows*columns]
+		rows: 3, 					// number of rows [3 ... 9]
+		cols: 3,		 			// number of columns [3 ... 9]
+		hole: 9,					// initial hole position [1 ... rows*columns]
 		shuffle: false,				// initially show shuffled pieces [true|false]
-		numbers: true,				// initially show numbers on pieces [true|false]
+		numbers: false,				// initially show numbers on pieces [true|false]
 		language: 'en',				// language for gui elements [language code]
 		
 		// display additional gui controls
@@ -23,7 +23,7 @@ $.fn.jqPuzzle = function(settings, texts) {
 			shufflePieces: true,	// display 'Shuffle' button [true|false]
 			confirmShuffle: true,	// ask before shuffling [true|false]
 			toggleOriginal: true,	// display 'Original' button [true|false]
-			toggleNumbers: true,	// display 'Numbers' button [true|false]
+			toggleNumbers: false,	// display 'Numbers' button [true|false]
 			counter: true,			// display moves counter [true|false]
 			timer: true,			// display timer (seconds) [true|false]
 			pauseTimer: false		// pause timer if 'Original' button is activated 
