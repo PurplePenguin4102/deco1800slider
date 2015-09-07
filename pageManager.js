@@ -3,16 +3,23 @@ $(document).ready(main);
 function main () {
     var usrSelect
     var leaderboard
-    $('.menuButton').click(start_game);
+	$('.playButton').click(open_menu);
+	$('.menuButton').click(open_difficutly);
+    $('.difficultyButton').click(start_game);
     $('.solveButton').click(game_end);
     $('.endButton').click(play_again);
 }
 
-function start_game() {
-    var troveResult;
+function open_menu(){
+	$(homepage).hide('slow');
+	$(menu).show('slow');
+	
+}
+function open_difficutly() {
+	$(menu).hide('slow');
+	$(difficulty).show('slow');
 
-    $(menu).hide('slow');
-    usrSelect = $(this).attr('id');
+	usrSelect = $(this).attr('id');
     //troveResult = trove_search(usrSelect);
     //dump_asset(troveResult);
 
@@ -30,7 +37,15 @@ function start_game() {
             $("#slider").attr('src', "./assets/usr.jpg");
             break;
     }
+	
+}
 
+
+function start_game() {
+    var troveResult;
+
+    $(difficulty).hide('slow');
+    
     //$("#jqslider").attr('src', "./assets/troveResult.jpg");
 
     $(puzzle).fadeTo('slow', 1);

@@ -16,7 +16,6 @@ Organisation: Team Jigglypuff
         <script type="text/javascript" src="./pageManager.js"></script>
 
         <script type="text/javascript" src="./js/jquery.jqpuzzle.full.js"></script>
-
         <link type="stylesheet/css" rel="stylesheet" href="./style.css">
     </head>
     <body>
@@ -33,12 +32,26 @@ Organisation: Team Jigglypuff
                 <canvas id="scoreArea">
                 <div id="update"></div>
             </div>
+			<section id="homepage">
+			<img src="./assets/animals.jpg" class="jqPuzzle">
+			<div id="playNow" class="playButton">Play now</div>
+			</section>
+			
             <section id="menu">
             <div>
-                <p>Welcome to Auslider. Please select difficulty and category</p>
+                <p>Welcome to Auslider. Please select a category</p>
                 <div id="animals" class="menuButton">Animals</div>
                 <div id="politicians" class="menuButton">Politicians</div>
                 <div id="landmarks" class="menuButton">Landmarks</div>
+            </div>
+            </section>
+			
+			<section id="difficulty">
+            <div>
+                <p>Please select a difficulty </p>
+                <div id="easy" class="difficultyButton">Easy</div>
+                <div id="medium" class="difficultyButton">Medium</div>
+                <div id="hard" class="difficultyButton">Hard</div>
             </div>
             </section>
 

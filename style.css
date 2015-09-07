@@ -24,7 +24,7 @@ body {
 */
 }
 
-div.menuButton, div.endButton {
+div.menuButton, div.endButton, div .difficultyButton, div.playButton {
     width: 200px;
     background-color: #c30d36;
     border-radius: 50px;
@@ -33,6 +33,14 @@ div.menuButton, div.endButton {
     font-family: verdana;
     margin: 15px auto;
     cursor: pointer;
+}
+
+#menu{
+	display:none;
+}
+
+#difficulty{
+	display: none;
 }
 
 #explanation {
