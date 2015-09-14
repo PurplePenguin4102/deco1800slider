@@ -1,8 +1,10 @@
 var empList = [];
 
+/*function queryBoard(var score) {
+      //compares a number called "score" to the current leaderboard and
+      //returns a position. if the position > 50 then returns null
+};*/
 function updateScore (a, b) {
-      //If the score input has the same name as the one in the empList, return true
-      //Update the score if the new score input is higher else do nothing
       for (i=0; i<empList.length ; i++) {
           if (empList[i].nick === a) {
               if (b > empList[i].score) {
@@ -37,46 +39,67 @@ function updateScore (a, b) {
       }
 }
 
-function checkScore(a, b) {
 
-      //Create a score object and append to the empList for given name and score
-      //Sort in accending order according to their scores
+function checkScore(a, b) {
       if (empList.length === 0) {
           empList.push({nick:a, score:b});
       }
       else if (empList.length === 1) {
           if (b > empList[0].score) {
-              empList.splice(0,0,{nick:a, score:b});
+              if (empList[0].nick === a) {
+                  empList[0].score = b;
+              }
+              else {
+              empList.unshift({nick:a, score:b});
+              }
           }
           else {
               empList.push({nick:a, score:b});
           }
       }
       else {
-          var diff = [];
-          for (i=0; i <= empList.length; i++) {
-              if (b === empList[i].score) {
-                  break;
-                  empList.splice(i+1,0,{nick:a, score:b});
-              }
-              else {
-                  diff.push(b - empList[i].score);
-              };
-          var max = Math.min.apply(Math, diff); //copied from stackoverflow
-          count = 0;
-          for (min in diff) {
-              count = count + 1
-          };
-          var index = diff.indexOf(min);
-          if (min > 0) {
-              empList.splice(index-1, 0, {nick:a, score:b})
+          if (updateScore(a,b)) {
+              null;
           }
           else {
-              empList.splice(index+count+1, 0, {nick:a, score:b})
+            var diff = [];
+            for (i=0; i < empList.length; i++) {
+                if (b === empList[i].score) {
+                    empList.splice(i+1,0,{nick:a, score:b});
+                }
+                else {
+                    diff.push(b - empList[i].score);
+                };
+            };
+            var checkNeg = [];
+            var value = diff[0];
+            for (i=1; i < diff.length; i++) {
+                if (diff[i] < value && diff[i] > 0) {
+                    value = diff[i];
+                }
+                else if (diff[i] > value && diff[i] > 0) {
+                    value = value;
+                    if (value < 0) {
+                        value = diff[i];
+                    }
+                }
+                else {
+                    checkNeg.push(diff[i]);
+                }
+            if (checkNeg.length === diff.length) {
+                value = Math.max.apply(Math, diff); //copied from stackoverflow
+            }
+            };
+            var index = diff.indexOf(value);
+            if (value > 0) {
+                empList.splice(index, 0, {nick:a, score:b});
+            }
+            else {
+                empList.splice(index+1, 0, {nick:a, score:b})
+            }
           }
           };
-      };
-}
+      }
 
 function setScore(a, b) {
       //puts the name and associated score into the leaderboard (scores.txt)
@@ -90,19 +113,21 @@ function setScore(a, b) {
       };
 }
 
-/*function getScores() {
-      //This function needs to be able to fetch a list of scores from
-      //leaderboard and returns a list with objects containing names
-      //and scores
-      return empList;
-}*/
-
 setScore("Chai", 5);
+setScore("fuck", 1);
+console.log(empList);
 setScore("CB", 10);
 console.log(empList);
 setScore("gg", 2);
 console.log(empList);
-setScore("ggwp", 100);
+setScore("fkDECO1800", 100);
 console.log(empList);
-setScore("fg", 7);
+setScore("Chai", 15);
 console.log(empList);
+
+/*function getScores() {
+      //This function needs to be able to fetch a list of scores from
+      //leaderboard and returns two lists (list of lists) containing names
+      //and scores
+      return emplist;
+};*/
