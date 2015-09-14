@@ -3,6 +3,7 @@ $(document).ready(main);
 function main () {
     var usrSelect
     var leaderboard
+	$('.navButton').click(open_homepage);
 	$('.playButton').click(open_menu);
 	$('.menuButton').click(open_difficutly);
     $('.difficultyButton').click(start_game);
@@ -10,6 +11,14 @@ function main () {
     $('.endButton').click(play_again);
 }
 
+function open_homepage() {
+	$(homepage).hide('slow');
+	$(menu).show('slow');
+	$(difficulty).hide('slow');
+	$(puzzle).hide('slow');
+    $(playAgain).hide('slow');
+    kill_slider($(".jqPuzzle"));
+}
 function open_menu(){
 	$(homepage).hide('slow');
 	$(menu).show('slow');
@@ -43,9 +52,7 @@ function open_difficutly() {
 
 function start_game() {
     var troveResult;
-
-    $(difficulty).hide('slow');
-    
+    $(difficulty).hide('slow');    
     //$("#jqslider").attr('src', "./assets/troveResult.jpg");
 
     $(puzzle).fadeTo('slow', 1);

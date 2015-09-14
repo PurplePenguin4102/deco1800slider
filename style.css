@@ -11,7 +11,9 @@ and open the template in the editor.
 body {
     background: #002f49;
     text-align: center;
-    color: #ffb400
+    color: #ffb400;
+	width:100%;
+	font-family: Sans-Serif;
 
 }
 
@@ -19,6 +21,7 @@ body {
     position: relative;
     width: 1000px;
     margin: auto;
+	background: #002f49;
 /*
     background-color: rgba(255,255,255,0.3);
 */
@@ -68,4 +71,69 @@ div.menuButton, div.endButton, div .difficultyButton, div.playButton {
 
 #highscore {
     display: none;
+}
+
+#navigation {
+	
+   top: 0;
+   width: 100%;
+   border-bottom: 4px solid;
+   margin-left: 0px;
+   padding-left: 0px;
+}
+
+}
+#navigation ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#navigation ul li {
+    display: inline;
+	color: #ffb400;
+}
+
+
+#ausliderhome {
+	margin-left: 0;
+	padding-right: 12%;
+	font-size: 60px;
+}
+
+div.navButton{
+	display: inline;
+	font-size: 30px;
+    width: 60px;
+	background-color: #002f49;
+	text-decoration: none;
+	color: #ffb400;
+	padding-left: 0;
+	padding-right: 10%;
+	cursor: pointer;
+	}
+	
+div.navButton:hover{
+	color:#c30d36;
+}
+
+#slider{
+	margin-top: 5%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom: 5%;
+}
+
+#homeimg{
+	margin-top: 5%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:5%;
+}
+
+footer{
+	padding: 10px;
+	position: fixed;
+	bottom: 0;
+	
 }
