@@ -60,8 +60,8 @@ $.fn.jqPuzzle = function(settings, texts) {
 	// language localizations
 	var i18n = {
 		en: {
-			shuffleLabel: 			'Shuffle',
-			toggleOriginalLabel: 	'Original',
+			shuffleLabel: 			'Start',
+			toggleOriginalLabel: 	'Hint',
 			toggleNumbersLabel: 	'Numbers',
 			confirmShuffleMessage: 	'Do you really want to shuffle?',
 			movesLabel:				'moves',
@@ -702,7 +702,7 @@ $.fn.jqPuzzle = function(settings, texts) {
 					padding: '0px',
 					backgroundColor: 'transparent'
 				})
-				.append($credits).append($controls);
+				.append($controls);
 
 			// full gui (including wrapper and panel)
 			var $gui = $('<div/>')

@@ -14,14 +14,23 @@ body {
     color: #ffb400;
 	width:100%;
 	font-family: Sans-Serif;
-
+    background-image: url("assets/backgroundimg.jpg");
+    background-repeat: repeat-x-y;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	height: 100%;
 }
 
 #container {
+	top: 0;
+	min-height: 100vh;
     position: relative;
     width: 1000px;
-    margin: auto;
+    margin: 0px auto 0px auto;
 	background: #002f49;
+	
 /*
     background-color: rgba(255,255,255,0.3);
 */
@@ -80,9 +89,13 @@ div.menuButton, div.endButton, div .difficultyButton, div.playButton {
    border-bottom: 4px solid;
    margin-left: 0px;
    padding-left: 0px;
+   padding-top: 0px;
 }
 
+#fuck_you {
+   margin-top: 0px;	
 }
+
 #navigation ul {
     list-style-type: none;
     margin-left: 0;
@@ -122,6 +135,7 @@ div.navButton:hover{
 	margin-left:auto;
 	margin-right:auto;
 	margin-bottom: 5%;
+	
 }
 
 #homeimg{
