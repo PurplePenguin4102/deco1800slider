@@ -1,6 +1,6 @@
 function init_slider(image) {
   //turn the DOM element image into a sliding puzzle
-  image.jqPuzzle();
+  //image.jqPuzzle();
 }
 
 function mix_slider(image) {

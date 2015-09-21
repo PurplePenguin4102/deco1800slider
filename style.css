@@ -12,7 +12,6 @@ body {
     background: #002f49;
     text-align: center;
     color: #ffb400;
-	width:100%;
 	font-family: Sans-Serif;
     background-image: url("assets/backgroundimg.jpg");
     background-repeat: repeat-x-y;
@@ -92,7 +91,7 @@ div.menuButton, div.endButton, div .difficultyButton, div.playButton {
    padding-top: 0px;
 }
 
-#fuck_you {
+#navlist {
    margin-top: 0px;	
 }
 
@@ -136,8 +135,18 @@ div.navButton:hover{
 	margin-right:auto;
 	margin-bottom: 5%;
 	
+	
 }
-
+/*
+#homeimg, #slider{
+	border: solid;
+	border-width: 20px;
+	border-style: outset;
+	border-color: #ffb400;
+	border-radius: 15px 50px;
+	
+	}
+*/
 #homeimg{
 	margin-top: 5%;
 	margin-left:auto;

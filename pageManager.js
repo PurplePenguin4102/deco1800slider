@@ -51,10 +51,17 @@ function open_difficutly() {
 
 
 function start_game() {
+	
+	
+    //troveResult = trove_search(usrSelect);
+    //dump_asset(troveResult);
+
+   
+	
     var troveResult;
     $(difficulty).hide('slow');    
     //$("#jqslider").attr('src', "./assets/troveResult.jpg");
-
+	
     $(puzzle).fadeTo('slow', 1);
     console.log("hello");
     init_slider($("#slider"));

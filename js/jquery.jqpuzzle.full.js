@@ -57,6 +57,150 @@ $.fn.jqPuzzle = function(settings, texts) {
 		}
 	};
 	
+	var settingseasy = {
+		
+		rows: 3, 					// number of rows [3 ... 9]
+		cols: 3,		 			// number of columns [3 ... 9]
+		hole: 9,					// initial hole position [1 ... rows*columns]
+		shuffle: false,				// initially show shuffled pieces [true|false]
+		numbers: false,				// initially show numbers on pieces [true|false]
+		language: 'en',				// language for gui elements [language code]
+		
+		// display additional gui controls
+		control: {
+			shufflePieces: true,	// display 'Shuffle' button [true|false]
+			confirmShuffle: true,	// ask before shuffling [true|false]
+			toggleOriginal: true,	// display 'Original' button [true|false]
+			toggleNumbers: false,	// display 'Numbers' button [true|false]
+			counter: true,			// display moves counter [true|false]
+			timer: true,			// display timer (seconds) [true|false]
+			pauseTimer: false		// pause timer if 'Original' button is activated 
+									// [true|false]
+		},
+		
+		// perform actions when the puzzle is solved sucessfully
+		success: {
+			fadeOriginal: true,		// cross-fade original image [true|false]
+			callback: undefined,	// callback a user-defined function [function]
+									// the function is passed an object as its argument
+									// which includes the fields 'moves' and 'seconds'
+			callbackTimeout: 300	// time in ms after which the callback is called
+		},		
+		
+		// animation speeds and settings
+		animation: {
+			shuffleRounds: 3,		// number of shuffle rounds [1 ... ]
+			shuffleSpeed: 800,		// time in ms to perform a shuffle round
+			slidingSpeed: 200,		// time in ms for a single move
+			fadeOriginalSpeed: 600	// time in ms to cross-fade original image
+		},
+		
+		// additional style information not specified via css
+		style: {
+			gridSize: 2,			// space between two pieces in px
+			overlap: true,			// if true, adjacent piece borders will overlap
+									// applies only if gridSize is set to 0
+			backgroundOpacity: 0.1	// opacity of the original image behind the pieces
+									// [0 ... 1] (0 means no display)
+		}
+	};
+	
+	var settingsmed = {
+		
+		rows: 4, 					// number of rows [3 ... 9]
+		cols: 4,		 			// number of columns [3 ... 9]
+		hole: 16,					// initial hole position [1 ... rows*columns]
+		shuffle: false,				// initially show shuffled pieces [true|false]
+		numbers: false,				// initially show numbers on pieces [true|false]
+		language: 'en',				// language for gui elements [language code]
+		
+		// display additional gui controls
+		control: {
+			shufflePieces: true,	// display 'Shuffle' button [true|false]
+			confirmShuffle: true,	// ask before shuffling [true|false]
+			toggleOriginal: true,	// display 'Original' button [true|false]
+			toggleNumbers: false,	// display 'Numbers' button [true|false]
+			counter: true,			// display moves counter [true|false]
+			timer: true,			// display timer (seconds) [true|false]
+			pauseTimer: false		// pause timer if 'Original' button is activated 
+									// [true|false]
+		},
+		
+		// perform actions when the puzzle is solved sucessfully
+		success: {
+			fadeOriginal: true,		// cross-fade original image [true|false]
+			callback: undefined,	// callback a user-defined function [function]
+									// the function is passed an object as its argument
+									// which includes the fields 'moves' and 'seconds'
+			callbackTimeout: 300	// time in ms after which the callback is called
+		},		
+		
+		// animation speeds and settings
+		animation: {
+			shuffleRounds: 3,		// number of shuffle rounds [1 ... ]
+			shuffleSpeed: 800,		// time in ms to perform a shuffle round
+			slidingSpeed: 200,		// time in ms for a single move
+			fadeOriginalSpeed: 600	// time in ms to cross-fade original image
+		},
+		
+		// additional style information not specified via css
+		style: {
+			gridSize: 2,			// space between two pieces in px
+			overlap: true,			// if true, adjacent piece borders will overlap
+									// applies only if gridSize is set to 0
+			backgroundOpacity: 0.1	// opacity of the original image behind the pieces
+									// [0 ... 1] (0 means no display)
+		}
+	};
+	
+	var settingshard = {
+		
+		rows: 5, 					// number of rows [3 ... 9]
+		cols: 5,		 			// number of columns [3 ... 9]
+		hole: 25,					// initial hole position [1 ... rows*columns]
+		shuffle: false,				// initially show shuffled pieces [true|false]
+		numbers: false,				// initially show numbers on pieces [true|false]
+		language: 'en',				// language for gui elements [language code]
+		
+		// display additional gui controls
+		control: {
+			shufflePieces: true,	// display 'Shuffle' button [true|false]
+			confirmShuffle: true,	// ask before shuffling [true|false]
+			toggleOriginal: true,	// display 'Original' button [true|false]
+			toggleNumbers: false,	// display 'Numbers' button [true|false]
+			counter: true,			// display moves counter [true|false]
+			timer: true,			// display timer (seconds) [true|false]
+			pauseTimer: false		// pause timer if 'Original' button is activated 
+									// [true|false]
+		},
+		
+		// perform actions when the puzzle is solved sucessfully
+		success: {
+			fadeOriginal: true,		// cross-fade original image [true|false]
+			callback: undefined,	// callback a user-defined function [function]
+									// the function is passed an object as its argument
+									// which includes the fields 'moves' and 'seconds'
+			callbackTimeout: 300	// time in ms after which the callback is called
+		},		
+		
+		// animation speeds and settings
+		animation: {
+			shuffleRounds: 3,		// number of shuffle rounds [1 ... ]
+			shuffleSpeed: 800,		// time in ms to perform a shuffle round
+			slidingSpeed: 200,		// time in ms for a single move
+			fadeOriginalSpeed: 600	// time in ms to cross-fade original image
+		},
+		
+		// additional style information not specified via css
+		style: {
+			gridSize: 2,			// space between two pieces in px
+			overlap: true,			// if true, adjacent piece borders will overlap
+									// applies only if gridSize is set to 0
+			backgroundOpacity: 0.1	// opacity of the original image behind the pieces
+									// [0 ... 1] (0 means no display)
+		}
+	};
+	
 	// language localizations
 	var i18n = {
 		en: {
@@ -100,7 +244,38 @@ $.fn.jqPuzzle = function(settings, texts) {
 	}
 
 	// extend the user-defined settings object with default settings
+	
 	settings = $.extend(true, {}, defaults, settings);
+	
+	$('.difficultyButton').click(function()
+	{
+    difSelect = $(this).attr('id');
+	switch(difSelect){
+		case "easy":
+		    console.log("case Easy");
+			$('#slider').jqPuzzle(settingseasy);
+		    break;
+		
+		case "medium":
+			console.log("case Medium");
+			$('#slider').jqPuzzle(settingsmed);
+			break;
+		
+		case "hard":
+			console.log("case Hard");
+			$('#slider').jqPuzzle(settingshard);
+			break;
+		
+		default: 
+		settings = $.extend(true, {}, defaults, settings)
+	}
+	}
+	)
+	
+	
+	
+
+	//Play with actually attaching this to the button, ie function needs to work off onclick "difbutton run this shit"
 
 	// extend the user-defined texts object with current language texts
 	texts = $.extend((i18n[settings.language] || i18n[defaults.language]), texts);
@@ -970,6 +1145,15 @@ $(document).ready(function() {
 		
 		// build settings object from micro format
 		var settings;
+		
+		var settingsmed;
+		
+		var settingshard;
+		
+		var settingseasy;
+		
+		
+		
 		if(match) {
 			settings = {	
 				rows: parseInt(match[2]),
