@@ -57,13 +57,12 @@ div.menuButton, div.endButton, div .difficultyButton, div.playButton {
 
 #explanation {
     background-color: rgba(255, 255, 255, 0.7);
-    float: right;
-    margin-right: 3em;
     color: black;
     position: absolute;
     text-align: center;
-    padding: 20px;
     top: 50px;
+    margin-top: 12.55%;
+    margin-left: auto;
 }
 
 #puzzle {

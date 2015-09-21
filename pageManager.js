@@ -12,25 +12,26 @@ function main () {
 }
 
 function open_homepage() {
-	$(homepage).hide('slow');
-	$(menu).show('slow');
-	$(difficulty).hide('slow');
-	$(puzzle).hide('slow');
+    $(homepage).hide('slow');
+    $(menu).show('slow');
+    $(difficulty).hide('slow');
+    $(puzzle).hide('slow');
     $(playAgain).hide('slow');
     kill_slider($(".jqPuzzle"));
 }
-function open_menu(){
-	$(homepage).hide('slow');
-	$(menu).show('slow');
-	
-}
-function open_difficutly() {
-	$(menu).hide('slow');
-	$(difficulty).show('slow');
 
-	usrSelect = $(this).attr('id');
-    //troveResult = trove_search(usrSelect);
-    //dump_asset(troveResult);
+function open_menu(){
+    $(homepage).hide('slow');
+    $(menu).show('slow');	
+}
+
+function open_difficutly() {
+    $(menu).hide('slow');
+    $(difficulty).show('slow');
+
+    usrSelect = $(this).attr('id');
+    troveResult = trove_search(usrSelect);
+    
 
     switch (usrSelect) {
         case "animals" :
@@ -52,10 +53,9 @@ function open_difficutly() {
 
 function start_game() {
     var troveResult;
-    $(difficulty).hide('slow');    
-    //$("#jqslider").attr('src', "./assets/troveResult.jpg");
+    $("#difficulty").hide('slow');    
 
-    $(puzzle).fadeTo('slow', 1);
+    $("#puzzle").fadeTo('slow', 1);
     console.log("hello");
     init_slider($("#slider"));
     mix_slider($("#slider"));
@@ -66,17 +66,18 @@ function start_game() {
 function game_end() {
     var imgHeight, imgWidth;
 
-    $(puzzle).fadeTo('slow', 0.5);
+    $("#puzzle").fadeTo('slow', 0.5);
     imgHeight = $("#slider").height() - 50;
     imgWidth = $("#slider").width() - 50;
 
-    $(explanation).width(imgWidth).height(imgHeight);
-    $(playAgain).fadeTo('slow', 1);
+    $("#explanation").width(imgWidth).height(imgHeight);
+    $("#explanation").css('margin-left', (998 - imgWidth) / 2);
+    $("#playAgain").fadeTo('slow', 1);
 }
 
 function play_again() {
-    $(puzzle).hide('slow');
-    $(playAgain).hide('slow');
-    $(menu).show('slow');
+    $("#puzzle").hide('slow');
+    $("#playAgain").hide('slow');
+    $("#menu").show('slow');
     kill_slider($(".jqPuzzle"));
 }
