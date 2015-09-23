@@ -30,7 +30,7 @@ function open_difficutly() {
     $(difficulty).show('slow');
 
     usrSelect = $(this).attr('id');
-    troveResult = trove_search(usrSelect);
+    //troveResult = trove_search(usrSelect);
     
 
     switch (usrSelect) {

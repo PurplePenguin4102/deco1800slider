@@ -46,6 +46,17 @@ div.menuButton, div.endButton, div .difficultyButton, div.playButton {
     cursor: pointer;
 }
 
+div.hintButton{
+	width: 100px;
+    background-color: #c30d36;
+    border-radius: 50px;
+    border: solid 2px gold;
+    font-size: 24px;
+    font-family: verdana;
+    margin: 15px auto;
+    cursor: pointer;
+}
+
 #menu{
 	display:none;
 }
@@ -134,18 +145,53 @@ div.navButton:hover{
 	margin-right:auto;
 	margin-bottom: 5%;
 	
+	display:inline;
 	
 }
+
+#controls{
+	margin-top: 5%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom: 5%;
+	float: left;
+	display:inline;
+	list-style-type: none;
+	font-size: 20px;
+	background-color: #002f49;
+	text-decoration: none;
+	color: #ffb400;
+}
+
+input{
+	background-color: #002f49;
+	border: none;
+	color: #FFFFFF;
+	font-size: 25px;
+	padding-left: 8px;
+}
+
+#controlslist{
+	text-align: left;
+	list-style-type: none;
+}
+
+#clearboth{
+	clear:both;
+}
+
 /*
 #homeimg, #slider{
 	border: solid;
 	border-width: 20px;
 	border-style: outset;
 	border-color: #ffb400;
-	border-radius: 15px 50px;
+	border-radius: 15px;
 	
 	}
-*/
+*/	
+
+
 #homeimg{
 	margin-top: 5%;
 	margin-left:auto;

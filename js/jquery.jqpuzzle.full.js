@@ -833,13 +833,13 @@ $.fn.jqPuzzle = function(settings, texts) {
 
 				// create counter component
 				if(control.counter)	$counter = $protoField.clone()
-					.appendTo($display)
-					.after(texts.movesLabel + ' ');
+					.appendTo($('#moves'))
+				//	.after(texts.movesLabel + ' ');
 					
 				// create timer component
 				if(control.timer) $timer = $protoField.clone()
-					.appendTo($display)
-					.after(texts.secondsLabel);
+					.appendTo($('#timer'))
+				//	.after(texts.secondsLabel);
 
 				// disable display if the puzzle is not shuffled yet
 				if(!settings.shuffle) $display.addClass('jqp-disabled');
