@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<form action="push.php" method="post">
+  Difficulty: <input type="hidden" name="difficulty" id="diff"><a id="diffdisplay"></a>
+  <br>
+  Time Taken: <input type="hidden" name="time" id="time"><a id="timedisplay"></a>
+  <br>
+  Score: <input type="hidden" name="score" id="hello"><a id="scoredisplay"></a>
+  <br>
+  Name: <input type="text" name="handle" maxlength="20">
+  <br>
+  <button> Submit </button>
+</form>
+
+<form action="pull.php"><button> PULL </button></form>
+
+<script type="text/javascript">
+    var gg = 50;
+    document.getElementById("hello").value = gg;
+    document.getElementById("diff").value = 'easy';
+    document.getElementById("time").value = 100;
+    document.getElementById("diffdisplay").innerHTML = 'easy';
+    document.getElementById("timedisplay").innerHTML = 100;
+    document.getElementById("scoredisplay").innerHTML = gg;
+</script>
+</html>
