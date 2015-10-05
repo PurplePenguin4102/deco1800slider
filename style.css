@@ -29,7 +29,7 @@ body {
     width: 1000px;
     margin: 0px auto 0px auto;
 	background: #002f49;
-	
+
 /*
     background-color: rgba(255,255,255,0.3);
 */
@@ -65,6 +65,10 @@ div.hintButton{
 	display: none;
 }
 
+#leaderboard{
+  display: none;
+}
+
 #explanation {
     background-color: rgba(255, 255, 255, 0.7);
     color: black;
@@ -92,7 +96,7 @@ div.hintButton{
 }
 
 #navigation {
-	
+
    top: 0;
    width: 100%;
    border-bottom: 4px solid;
@@ -102,7 +106,7 @@ div.hintButton{
 }
 
 #navlist {
-   margin-top: 0px;	
+   margin-top: 0px;
 }
 
 #navigation ul {
@@ -134,7 +138,7 @@ div.navButton{
 	padding-right: 10%;
 	cursor: pointer;
 	}
-	
+
 div.navButton:hover{
 	color:#c30d36;
 }
@@ -144,9 +148,9 @@ div.navButton:hover{
 	margin-left:auto;
 	margin-right:auto;
 	margin-bottom: 5%;
-	
+
 	display:inline;
-	
+
 }
 
 #controls{
@@ -187,9 +191,9 @@ input{
 	border-style: outset;
 	border-color: #ffb400;
 	border-radius: 15px;
-	
+
 	}
-*/	
+*/
 
 
 #homeimg{
@@ -201,7 +205,7 @@ input{
 
 footer{
 	padding: 10px;
-	
+
 	bottom: 0;
-	
+
 }

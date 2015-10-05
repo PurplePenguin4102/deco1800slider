@@ -12,6 +12,7 @@ function main () {
 }
 
 function open_homepage() {
+    $(leaderboard).hide('slow');
     $(homepage).hide('slow');
     $(menu).show('slow');
     $(difficulty).hide('slow');
@@ -22,7 +23,17 @@ function open_homepage() {
 
 function open_menu(){
     $(homepage).hide('slow');
-    $(menu).show('slow');	
+    $(menu).show('slow');
+}
+
+function open_leaderboard() {
+    $(leaderboard).show('slow');
+    $(homepage).hide('slow');
+    $(menu).hide('slow');
+    $(difficulty).hide('slow');
+    $(puzzle).hide('slow');
+    $(playAgain).hide('slow');
+    kill_slider($(".jqPuzzle"));
 }
 
 function open_difficutly() {
@@ -31,7 +42,7 @@ function open_difficutly() {
 
     usrSelect = $(this).attr('id');
     //troveResult = trove_search(usrSelect);
-    
+
 
     switch (usrSelect) {
         case "animals" :
@@ -47,22 +58,22 @@ function open_difficutly() {
             $("#slider").attr('src', "./assets/usr.jpg");
             break;
     }
-	
+
 }
 
 
 function start_game() {
-	
-	
+
+
     //troveResult = trove_search(usrSelect);
     //dump_asset(troveResult);
 
-   
-	
+
+
     var troveResult;
-    $(difficulty).hide('slow');    
+    $(difficulty).hide('slow');
     //$("#jqslider").attr('src', "./assets/troveResult.jpg");
-	
+
     $(puzzle).fadeTo('slow', 1);
     console.log("hello");
     init_slider($("#slider"));

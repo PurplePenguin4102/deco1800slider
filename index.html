@@ -19,32 +19,57 @@ Organisation: Team Jigglypuff
         <link type="stylesheet/css" rel="stylesheet" href="./style.css">
     </head>
     <body>
-		
         <div id="container">
-			<div id="navigation">
-				<ul id="navlist">
-					<li><div id="ausliderhome" class="navButton">AuSlider</div></li>
-					<li><div class="navButton">Leaderboard</div></li>
-					<li><div class="navButton">Settings</div></li>
-				</ul>
-			</div> 
-           
-		   <header>
+			       <div id="navigation">
+        				<ul id="navlist">
+        					<li><div id="ausliderhome" class="navButton">AuSlider</div></li>
+        					<li><div class="navButton">Leaderboard</div></li>
+        					<li><div class="navButton">Settings</div></li>
+        				</ul>
+			       </div>
+		        <header>
                 <!-- <h1 id="title">AuSlider</h1> !-->
             </header>
             <div id="highscore">
                 <canvas id="scoreArea">
                 <div id="update"></div>
             </div>
-			
 			<section id="homepage">
-			<img id="homeimg" src="./assets/placeholder.jpg" class="jqPuzzle jqp-r3-c3-BDANCE">
-			<div id="playNow" class="playButton">Play now</div>
+    			<img id="homeimg" src="./assets/placeholder.jpg" class="jqPuzzle jqp-r3-c3-BDANCE">
+    			<div id="playNow" class="playButton">Play now</div>
 			</section>
-			
-            <section id="menu">
-            <div>
-                <p>Welcome to Auslider. Please select a category</p>
+      <section id="leaderboard">
+          <form action="testForm/push.php" method="post">
+            Difficulty: <input type="hidden" name="difficulty" id="diff"><a id="diffdisplay"></a>
+            <br>
+            Time Taken: <input type="hidden" name="time" id="time"><a id="timedisplay"></a>
+            <br>
+            Score: <input type="hidden" name="score" id="hello"><a id="scoredisplay"></a>
+            <br>
+            Name: <input type="text" name="handle" maxlength="20" required>
+            <br>
+            <button> Submit </button>
+          </form>
+
+          <a href="testForm/pullEasy.php">easy</a>
+
+          <a href="testForm/pullNormal.php">normal</a>
+
+          <a href="testForm/pullHard.php">hard</a>
+
+          <script type="text/javascript">
+              var gg = 50;
+              document.getElementById("hello").value = gg;
+              document.getElementById("diff").value = 'easy';
+              document.getElementById("time").value = 100;
+              document.getElementById("diffdisplay").innerHTML = 'easy';
+              document.getElementById("timedisplay").innerHTML = 100;
+              document.getElementById("scoredisplay").innerHTML = gg;
+          </script>
+      </section>
+      <section id="menu">
+          <div>
+              <p>Welcome to Auslider. Please select a category</p>
 <?php
 
 // print output
@@ -57,7 +82,7 @@ echo 'Neo: I am Neo, but my people call me The One.';
                 <div id="landmarks" class="menuButton">Landmarks</div>
             </div>
             </section>
-			
+
 			<section id="difficulty">
             <div>
                 <p>Please select a difficulty </p>
