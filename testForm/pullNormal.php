@@ -1,5 +1,6 @@
-<table id="normal">
+<table id="normal" class="center">
   <tr>
+      <td><h3>Ranking</h3></td>
       <td><h3>Nickname</h3></td>
       <td><h3>Score</h3></td>
   </tr>

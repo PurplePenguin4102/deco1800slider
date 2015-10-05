@@ -1,4 +1,4 @@
-<table id="easy">
+<table id="easy" class="center">
   <tr>
       <td><h3>Ranking</h3></td>
       <td><h3>Nickname</h3></td>
