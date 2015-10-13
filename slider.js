@@ -27,4 +27,8 @@ function play_slider() {
 function kill_slider(slider) {
     slider.remove();
     $('#puzzle').append('<img id=slider>');
+	$('#timer').empty('readonly');
+	$('#moves').empty('readonly');
+	
+	
 }
