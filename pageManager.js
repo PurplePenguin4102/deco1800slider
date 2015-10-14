@@ -3,7 +3,8 @@ $(document).ready(main);
 function main () {
     var usrSelect
     var leaderboard
-	$('.navButton').click(open_leaderboard);
+	$('.leaderButton').click(open_leaderboard);
+	$('.navButton').click(open_homepage);
 	$('.playButton').click(open_menu);
 	$('.menuButton').click(open_difficutly);
     $('.difficultyButton').click(start_game);
