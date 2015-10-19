@@ -5,7 +5,7 @@
       <td><h3>Score</h3></td>
   </tr>
   <?php
-    $conn = mysql_connect("localhost", "jiggly", "");
+    $conn = mysql_connect("localhost", "jiggly", "ggwp");
     $db = mysql_select_db("scores");
 
     $num = 1;

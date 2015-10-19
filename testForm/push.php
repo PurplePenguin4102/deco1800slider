@@ -1,5 +1,5 @@
 <?php
-      $conn = mysql_connect("localhost", "jiggly", "");
+      $conn = mysql_connect("localhost", "jiggly", "ggwp");
       $db = mysql_select_db("scores");
 
       $handle = $_POST['handle'];
