@@ -34,7 +34,7 @@ $.fn.jqPuzzle = function(settings, texts) {
 		// perform actions when the puzzle is solved sucessfully
 		success: {
 			fadeOriginal: true,		// cross-fade original image [true|false]
-			callback: undefined,	// callback a user-defined function [function]
+			callback: game_end,	// callback a user-defined function [function]
 									// the function is passed an object as its argument
 									// which includes the fields 'moves' and 'seconds'
 			callbackTimeout: 300	// time in ms after which the callback is called
@@ -63,13 +63,13 @@ $.fn.jqPuzzle = function(settings, texts) {
 		rows: 3, 					// number of rows [3 ... 9]
 		cols: 3,		 			// number of columns [3 ... 9]
 		hole: 9,					// initial hole position [1 ... rows*columns]
-		shuffle: false,				// initially show shuffled pieces [true|false]
+		shuffle: true,				// initially show shuffled pieces [true|false]
 		numbers: false,				// initially show numbers on pieces [true|false]
 		language: 'en',				// language for gui elements [language code]
 		
 		// display additional gui controls
 		control: {
-			shufflePieces: true,	// display 'Shuffle' button [true|false]
+			shufflePieces: false,	// display 'Shuffle' button [true|false]
 			confirmShuffle: true,	// ask before shuffling [true|false]
 			toggleOriginal: true,	// display 'Original' button [true|false]
 			toggleNumbers: false,	// display 'Numbers' button [true|false]
@@ -82,7 +82,7 @@ $.fn.jqPuzzle = function(settings, texts) {
 		// perform actions when the puzzle is solved sucessfully
 		success: {
 			fadeOriginal: true,		// cross-fade original image [true|false]
-			callback: undefined,	// callback a user-defined function [function]
+			callback: game_end,	// callback a user-defined function [function]
 									// the function is passed an object as its argument
 									// which includes the fields 'moves' and 'seconds'
 			callbackTimeout: 300	// time in ms after which the callback is called
@@ -111,13 +111,13 @@ $.fn.jqPuzzle = function(settings, texts) {
 		rows: 4, 					// number of rows [3 ... 9]
 		cols: 4,		 			// number of columns [3 ... 9]
 		hole: 16,					// initial hole position [1 ... rows*columns]
-		shuffle: false,				// initially show shuffled pieces [true|false]
+		shuffle: true,				// initially show shuffled pieces [true|false]
 		numbers: false,				// initially show numbers on pieces [true|false]
 		language: 'en',				// language for gui elements [language code]
 		
 		// display additional gui controls
 		control: {
-			shufflePieces: true,	// display 'Shuffle' button [true|false]
+			shufflePieces: false,	// display 'Shuffle' button [true|false]
 			confirmShuffle: true,	// ask before shuffling [true|false]
 			toggleOriginal: true,	// display 'Original' button [true|false]
 			toggleNumbers: false,	// display 'Numbers' button [true|false]
@@ -130,7 +130,7 @@ $.fn.jqPuzzle = function(settings, texts) {
 		// perform actions when the puzzle is solved sucessfully
 		success: {
 			fadeOriginal: true,		// cross-fade original image [true|false]
-			callback: undefined,	// callback a user-defined function [function]
+			callback: game_end,	// callback a user-defined function [function]
 									// the function is passed an object as its argument
 									// which includes the fields 'moves' and 'seconds'
 			callbackTimeout: 300	// time in ms after which the callback is called
@@ -159,13 +159,13 @@ $.fn.jqPuzzle = function(settings, texts) {
 		rows: 5, 					// number of rows [3 ... 9]
 		cols: 5,		 			// number of columns [3 ... 9]
 		hole: 25,					// initial hole position [1 ... rows*columns]
-		shuffle: false,				// initially show shuffled pieces [true|false]
+		shuffle: true,				// initially show shuffled pieces [true|false]
 		numbers: false,				// initially show numbers on pieces [true|false]
 		language: 'en',				// language for gui elements [language code]
 		
 		// display additional gui controls
 		control: {
-			shufflePieces: true,	// display 'Shuffle' button [true|false]
+			shufflePieces: false,	// display 'Shuffle' button [true|false]
 			confirmShuffle: true,	// ask before shuffling [true|false]
 			toggleOriginal: true,	// display 'Original' button [true|false]
 			toggleNumbers: false,	// display 'Numbers' button [true|false]
@@ -178,7 +178,7 @@ $.fn.jqPuzzle = function(settings, texts) {
 		// perform actions when the puzzle is solved sucessfully
 		success: {
 			fadeOriginal: true,		// cross-fade original image [true|false]
-			callback: undefined,	// callback a user-defined function [function]
+			callback: game_end,	// callback a user-defined function [function]
 									// the function is passed an object as its argument
 									// which includes the fields 'moves' and 'seconds'
 			callbackTimeout: 300	// time in ms after which the callback is called
@@ -568,7 +568,8 @@ $.fn.jqPuzzle = function(settings, texts) {
 							$background.remove().prependTo($wrapper);
 
 							// re-enable all buttons
-							$buttons.removeClass('jqp-disabled');							
+							$buttons.removeClass('jqp-disabled');		
+							//game_end(); 
 						});
 					}
 				}
