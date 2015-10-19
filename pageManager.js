@@ -8,15 +8,18 @@ function main () {
     var leaderboard;
 	myVar = 1;
 	
-	$('.leaderButton').click(open_leaderboard);
-	$('.navButton').click(open_homepage);
-	$('.playButton').click(open_menu);
-	$('.menuButton').click(open_difficutly);
+    //set up callbacks for divs
+    $('.navButton').click(open_leaderboard);
+    $('.playButton').click(open_menu);
+    $('.menuButton').click(open_difficutly);
     $('.difficultyButton').click(start_game);
     $('.solveButton').click(game_end);
     $('.endButton').click(play_again);
-	
-	//make_puzzle();
+    //load trove images
+    trove_search("animals");
+    trove_search("politicians");
+    trove_search("landmarks");
+    //remove loading div to activate site
 }
 
 function open_homepage() {
@@ -68,38 +71,14 @@ function open_difficutly() {
     $(difficulty).show('slow');
 
     usrSelect = $(this).attr('id');
-    //troveResult = trove_search(usrSelect);
-
-
-    switch (usrSelect) {
-        case "animals" :
-            $("#slider").attr('src', "./assets/animals.jpg");
-            break;
-        case "politicians" :
-            $("#slider").attr('src', "./assets/dickheads.jpg");
-            break;
-        case "landmarks" :
-            $("#slider").attr('src', "./assets/landmarks.jpg");
-            break;
-        case "usr" :
-            $("#slider").attr('src', "./assets/usr.jpg");
-            break;
-    }
-
+    dump_asset_to_slider(usrSelect);
 }
 
 
 function start_game() {
-
-
-    //troveResult = trove_search(usrSelect);
-    //dump_asset(troveResult);
-
-
-
     var troveResult;
+
     $(difficulty).hide('slow');
-    //$("#jqslider").attr('src', "./assets/troveResult.jpg");
 
     $(puzzle).fadeTo('slow', 1);
     console.log("hello");
