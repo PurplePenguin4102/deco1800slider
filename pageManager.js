@@ -7,10 +7,10 @@ function main () {
     var usrSelect;
     var leaderboard;
 	myVar = 1;
-	
+
     //set up callbacks for divs
     $('.navButton').click(open_homepage);
-	$('.leaderButton').click(open_leaderboard);
+    $('.leaderButton').click(open_leaderboard);
     $('.playButton').click(open_menu);
     $('.menuButton').click(open_difficutly);
     $('.difficultyButton').click(start_game);
@@ -36,7 +36,7 @@ function open_homepage() {
 function open_menu(){
     $(homepage).hide('slow');
     $(menu).show('slow');
-	
+
 }
 
 function open_leaderboard() {

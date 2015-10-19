@@ -136,7 +136,7 @@ div.hintButton, div.solveButton{
 div.navButton, div.leaderButton{
 	display: inline;
 	font-size: 30px;
-    width: 60px;
+  width: 60px;
 	background-color: #002f49;
 	text-decoration: none;
 	color: #ffb400;
@@ -145,7 +145,7 @@ div.navButton, div.leaderButton{
 	cursor: pointer;
 	}
 
-div.navButton:hover{
+div.navButton:hover, div.leaderButton:hover{
 	color:#c30d36;
 }
 
