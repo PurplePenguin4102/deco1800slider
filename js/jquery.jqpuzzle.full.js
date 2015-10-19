@@ -1,3 +1,4 @@
+
 (function($) {
 /*
  * jqPuzzle - Sliding Puzzles with jQuery
@@ -1001,10 +1002,24 @@ $.fn.jqPuzzle = function(settings, texts) {
 				shuffle(animation.shuffleRounds, animation.shuffleSpeed);	
 			});
 			
-			if (image = "#homgeimage") setInterval(function () {
+						
+			
+			
+		
+			var autoshuffle = function() {
 				shuffle(animation.shuffleRounds, animation.shuffleSpeed);
-			}, 5000);
-
+				
+			}
+			
+			
+			if(myVar == 1){
+				var homeshuffle = setInterval(autoshuffle, 2000);
+			}else{clearInterval(homeshuffle)}			
+			
+			$('.playButton').click(function(){window.myVar = 0;
+			window.clearInterval(homeshuffle)
+			});
+			
 			// toggle original on click
 			if(control.toggleOriginal) $originalButton.click(function() {
 				// do nothing, if disabled
@@ -1128,6 +1143,7 @@ $.fn.jqPuzzle = function(settings, texts) {
 
 // automagically apply jqPuzzle to all images with class 'jqPuzzle'
 $(document).ready(function() {
+	
 
 	$('img.jqPuzzle').each(function() {
 
@@ -1156,6 +1172,9 @@ $(document).ready(function() {
 		var settingshard;
 		
 		var settingseasy;
+		
+		
+		
 		
 		
 		

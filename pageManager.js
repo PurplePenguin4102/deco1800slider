@@ -1,8 +1,13 @@
 $(document).ready(main);
 
+var myVar;
+
+
 function main () {
-    var usrSelect
-    var leaderboard
+    var usrSelect;
+    var leaderboard;
+	myVar = 1;
+	
 	$('.leaderButton').click(open_leaderboard);
 	$('.navButton').click(open_homepage);
 	$('.playButton').click(open_menu);
@@ -10,6 +15,8 @@ function main () {
     $('.difficultyButton').click(start_game);
     $('.solveButton').click(game_end);
     $('.endButton').click(play_again);
+	
+	//make_puzzle();
 }
 
 function open_homepage() {
@@ -25,6 +32,7 @@ function open_homepage() {
 function open_menu(){
     $(homepage).hide('slow');
     $(menu).show('slow');
+	
 }
 
 function open_leaderboard() {
@@ -99,6 +107,7 @@ function start_game() {
     mix_slider($("#slider"));
     start_clock();
     play_slider();
+	control = 0;
 }
 
 function game_end() {

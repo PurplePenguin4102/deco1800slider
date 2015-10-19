@@ -3,9 +3,10 @@ function init_slider(image) {
   //image.jqPuzzle();
 }
 
-setInterval(function mix_slider(image) {
-				//shuffle(animation.shuffleRounds, animation.shuffleSpeed)
-}, 5000);
+function mix_slider(image) {				
+}
+
+
 
 function get_score() {
   //returns the user's current score
