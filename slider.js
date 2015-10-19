@@ -28,11 +28,5 @@ function kill_slider(slider) {
     $('#puzzle').append('<img id=slider>');
 	$('#timer').empty('readonly');
 	$('#moves').empty('readonly');
-<<<<<<< HEAD
 	$('#hint').empty('readonly');
-	
-=======
-
-
->>>>>>> e4c5d743344297f048914e1f03b3222e2f9a9799
 }
