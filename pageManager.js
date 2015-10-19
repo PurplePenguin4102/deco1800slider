@@ -1,8 +1,13 @@
 $(document).ready(main);
 
+var myVar;
+
+
 function main () {
     var usrSelect;
     var leaderboard;
+	myVar = 1;
+
     //set up callbacks for divs
     $('.navButton').click(open_homepage);
     $('.leaderButton').click(open_leaderboard);
@@ -31,6 +36,7 @@ function open_homepage() {
 function open_menu(){
     $(homepage).hide('slow');
     $(menu).show('slow');
+
 }
 
 function open_leaderboard() {
@@ -81,6 +87,7 @@ function start_game() {
     mix_slider($("#slider"));
     start_clock();
     play_slider();
+	control = 0;
 }
 
 function game_end() {

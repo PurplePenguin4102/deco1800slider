@@ -1,3 +1,4 @@
+
 (function($) {
 /*
  * jqPuzzle - Sliding Puzzles with jQuery
@@ -545,7 +546,7 @@ $.fn.jqPuzzle = function(settings, texts) {
 				// when speed is defined, the function was triggered by a user event (button click)
 				if(speed) {
 					// do nothing, if disabled
-					if($shuffleButton.is('.jqp-disabled')) return false;
+					//if($shuffleButton.is('.jqp-disabled')) return false;
 
 					// do nothing, if locked
 					if(lock) return false;
@@ -1000,7 +1001,25 @@ $.fn.jqPuzzle = function(settings, texts) {
 			if(control.shufflePieces) $shuffleButton.click(function() {
 				shuffle(animation.shuffleRounds, animation.shuffleSpeed);	
 			});
-
+			
+						
+			
+			
+		
+			var autoshuffle = function() {
+				shuffle(animation.shuffleRounds, animation.shuffleSpeed);
+				
+			}
+			
+			
+			if(myVar == 1){
+				var homeshuffle = setInterval(autoshuffle, 2000);
+			}else{clearInterval(homeshuffle)}			
+			
+			$('.playButton').click(function(){window.myVar = 0;
+			window.clearInterval(homeshuffle)
+			});
+			
 			// toggle original on click
 			if(control.toggleOriginal) $originalButton.click(function() {
 				// do nothing, if disabled
@@ -1116,6 +1135,7 @@ $.fn.jqPuzzle = function(settings, texts) {
 		// ie shows some inconsistencies with img load and cached images
 		// fortunately, in this cases img.complete is true from the beginning
 		//if($.browser.msie && $srcImg[0] && $srcImg[0].complete) $srcImg.trigger('load');
+		
 
 
 	}).end(); // return full collection to allow chaining
@@ -1123,6 +1143,7 @@ $.fn.jqPuzzle = function(settings, texts) {
 
 // automagically apply jqPuzzle to all images with class 'jqPuzzle'
 $(document).ready(function() {
+	
 
 	$('img.jqPuzzle').each(function() {
 
@@ -1151,6 +1172,9 @@ $(document).ready(function() {
 		var settingshard;
 		
 		var settingseasy;
+		
+		
+		
 		
 		
 		

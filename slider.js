@@ -4,7 +4,6 @@ function init_slider(image) {
 }
 
 function mix_slider(image) {
-  //mix up the sliding puzzle on image
 }
 
 function get_score() {
@@ -21,7 +20,7 @@ function start_clock() {
 }
 
 function play_slider() {
-  
+
 }
 
 function kill_slider(slider) {
@@ -29,6 +28,6 @@ function kill_slider(slider) {
     $('#puzzle').append('<img id=slider>');
 	$('#timer').empty('readonly');
 	$('#moves').empty('readonly');
-	
-	
+
+
 }

@@ -149,6 +149,10 @@ div.navButton:hover, div.leaderButton:hover{
 	color:#c30d36;
 }
 
+div.leaderButton:hover{
+	color:#c30d36;
+}
+
 #slider{
 	margin-top: 5%;
 	margin-left:auto;
