@@ -10,6 +10,10 @@
 
     $num = 1;
     $query = mysql_query("SELECT Nickname, Score FROM score_data WHERE Difficulty='easy' ORDER BY Score DESC, Time ASC LIMIT 5");
+    if($query)
+      echo 'PULL SUCCESSFUL'
+    else
+      echo 'FAIL'
     while ($row = mysql_fetch_array($query, MYSQL_ASSOC)) {
     ?>
     <tr>
