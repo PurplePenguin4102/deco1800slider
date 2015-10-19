@@ -30,6 +30,6 @@ function kill_slider(slider) {
     $('#puzzle').append('<img id=slider>');
 	$('#timer').empty('readonly');
 	$('#moves').empty('readonly');
-	
+	$('#hint').empty('readonly');
 	
 }

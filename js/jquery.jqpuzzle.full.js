@@ -552,8 +552,8 @@ $.fn.jqPuzzle = function(settings, texts) {
 					if(lock) return false;
 					
 					// ask for confirmation
-					if(control.confirmShuffle && (moves > 0) && 
-					!window.confirm(texts.confirmShuffleMessage)) return false;
+					/*if(control.confirmShuffle && (moves > 0) && 
+					!window.confirm(texts.confirmShuffleMessage)) return false;*/
 
 					lock = true; // set lock
 					
@@ -801,7 +801,7 @@ $.fn.jqPuzzle = function(settings, texts) {
 			if(control.toggleOriginal) {
 				$originalButton = $protoButton.clone()
 					.text(texts.toggleOriginalLabel)
-					.appendTo($controls);
+					.appendTo($('#hint'));
 			}
 
 			// create toggle numbers button
