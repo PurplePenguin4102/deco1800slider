@@ -24,7 +24,7 @@ Organisation: Team Jigglypuff
                 <div id="navigation">
                     <ul id="navlist">
                         <li><div id="ausliderhome" class="navButton">AuSlider</div></li>
-                        <li><div class="navButton">Leaderboard</div></li>
+                        <li><div class="leaderButton">Leaderboard</div></li>
                     </ul>
                 </div>
             </header>
@@ -33,40 +33,18 @@ Organisation: Team Jigglypuff
                 <canvas id="scoreArea">
                 <div id="update"></div>
             </div>
-            
+
             <section id="homepage">
                 <img id="homeimg" src="./assets/Frontlogo.gif" class="jqPuzzle jqp-r3-c3-BDANCE">
                 <div id="playNow" class="playButton">Play now</div>
             </section>
 
             <section id="leaderboard">
-                <form action="testForm/push.php" method="post">
-                    Difficulty: <input type="hidden" name="difficulty" id="diff"><a id="diffdisplay"></a>
-                    <br>
-                    Time Taken: <input type="hidden" name="time" id="time"><a id="timedisplay"></a>
-                    <br>
-                    Score: <input type="hidden" name="score" id="hello"><a id="scoredisplay"></a>
-                    <br>
-                    Name: <input type="text" name="handle" maxlength="20" required>
-                    <br>
-                    <button> Submit </button>
-                </form>
-
                 <button onclick="showScore('Easy')">Easy</button>
                 <button onclick="showScore('Normal')">Normal</button>
                 <button onclick="showScore('Hard')">Hard</button>
 
                 <div id="txtHint"><b>Person info will be listed here...</b></div>
-
-                <script type="text/javascript">
-                    var gg = 50;
-                    document.getElementById("hello").value = gg;
-                    document.getElementById("diff").value = 'easy';
-                    document.getElementById("time").value = 100;
-                    document.getElementById("diffdisplay").innerHTML = 'easy';
-                    document.getElementById("timedisplay").innerHTML = 100;
-                    document.getElementById("scoredisplay").innerHTML = gg;
-                </script>
             </section>
 
             <section id="menu">
@@ -105,6 +83,26 @@ Organisation: Team Jigglypuff
 
             <section id="playAgain">
                 <p id="explanation">I'm an explanation :)</p>
+                <form action="testForm/push.php" method="post" id="explanation">
+                    Difficulty: <input type="hidden" name="difficulty" id="diff"><a id="diffdisplay"></a>
+                    <br>
+                    Time Taken: <input type="hidden" name="time" id="time"><a id="timedisplay"></a>
+                    <br>
+                    Score: <input type="hidden" name="score" id="hello"><a id="scoredisplay"></a>
+                    <br>
+                    Name: <input type="text" name="handle" maxlength="20" required>
+                    <br>
+                    <button> Submit </button>
+                </form>
+                <script type="text/javascript">
+                    var gg = 50;
+                    document.getElementById("hello").value = gg;
+                    document.getElementById("diff").value = 'easy';
+                    document.getElementById("time").value = 100;
+                    document.getElementById("diffdisplay").innerHTML = 'easy';
+                    document.getElementById("timedisplay").innerHTML = 100;
+                    document.getElementById("scoredisplay").innerHTML = gg;
+                </script>
                 <div class="endButton again">Play Again?</div>
             </section>
 

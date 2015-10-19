@@ -4,7 +4,8 @@ function main () {
     var usrSelect;
     var leaderboard;
     //set up callbacks for divs
-    $('.navButton').click(open_leaderboard);
+    $('.navButton').click(open_homepage);
+    $('.leaderButton').click(open_leaderboard);
     $('.playButton').click(open_menu);
     $('.menuButton').click(open_difficutly);
     $('.difficultyButton').click(start_game);

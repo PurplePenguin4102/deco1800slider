@@ -133,10 +133,10 @@ div.hintButton{
 	font-size: 60px;
 }
 
-div.navButton{
+div.navButton, div.leaderButton{
 	display: inline;
 	font-size: 30px;
-    width: 60px;
+  width: 60px;
 	background-color: #002f49;
 	text-decoration: none;
 	color: #ffb400;
@@ -145,7 +145,7 @@ div.navButton{
 	cursor: pointer;
 	}
 
-div.navButton:hover{
+div.navButton:hover, div.leaderButton:hover{
 	color:#c30d36;
 }
 
