@@ -9,7 +9,7 @@
     $db = mysql_select_db("scores");
 
     $num = 1;
-    $query = mysql_query("SELECT Nickname, Score FROM score_data WHERE Difficulty='easy' ORDER BY Score DESC, Time ASC LIMIT 5");
+    $query = mysql_query("SELECT Nickname, Score FROM score_data WHERE Difficulty='hard' ORDER BY Score DESC, Time ASC LIMIT 5");
     while ($row = mysql_fetch_assoc($query)){
       echo "<tr>";
 
