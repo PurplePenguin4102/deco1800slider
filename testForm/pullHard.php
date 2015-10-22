@@ -9,17 +9,20 @@
     $db = mysql_select_db("scores");
 
     $num = 1;
-    $query = mysql_query("SELECT Nickname, Score FROM score_data WHERE Difficulty='hard' ORDER BY Score DESC, Time ASC LIMIT 5");
-    while ($row = mysql_fetch_array($query, MYSQL_ASSOC)) {
-    ?>
-    <tr>
-        <td><?=$num;?></td>
-        <td><?=$row['Nickname']; ?></td>
-        <td><?=$row['Score']; ?></td>
-    </tr>
-    <?
-    $num = $num + 1;
+    $query = mysql_query("SELECT Nickname, Score FROM score_data WHERE Difficulty='easy' ORDER BY Score DESC, Time ASC LIMIT 5");
+    while ($row = mysql_fetch_assoc($query)){
+      echo "<tr>";
+
+      echo "<td>".$num."</td>";
+
+      echo "<td>".$row['Nickname']."</td>";
+
+      echo "<td>".$row['Score']."</td>";
+
+      echo "</tr>";
+
+      $num = $num + 1;
     }
     mysql_free_result($query);
-  ?>
+    ?>
 </table>
