@@ -40,11 +40,12 @@ Organisation: Team Jigglypuff
             </section>
 
             <section id="leaderboard">
-                <button onclick="showScore('Easy')">Easy</button>
-                <button onclick="showScore('Normal')">Normal</button>
-                <button onclick="showScore('Hard')">Hard</button>
-
-                <div id="txtHint"><b>Person info will be listed here...</b></div>
+              <div id="pull">
+                <div class="pullButton" onclick="showScore('Easy')">Easy</div>
+                <div class="pullButton" onclick="showScore('Normal')">Normal</div>
+                <div class="pullButton" onclick="showScore('Hard')">Hard</div>
+              </div>
+              <div id="txtHint"></div>
             </section>
 
             <section id="menu">
@@ -66,7 +67,6 @@ Organisation: Team Jigglypuff
             </section>
 
             <section id="puzzle">
-                
                 <div id="controls">
                     <ul id="controlslist">
                         <li>Time:<div id="timer"></div></li>
@@ -77,35 +77,34 @@ Organisation: Team Jigglypuff
                     </ul>
                 </div>
                 <img id="slider">
-				<div id="hintgiveup">
-				<ul id="gamebuttons">
-					<li><div id="hint" class="hintButton"></div></li>
-					<li><div class="solveButton solve">Give up?</div></li>
-				</ul>
-				</div>
-				<br/ id="clearboth">
+        				<div id="hintgiveup">
+          				<ul id="gamebuttons">
+          					<li><div id="hint" class="hintButton"></div></li>
+          					<li><div class="solveButton solve">Give up?</div></li>
+          				</ul>
+        				</div>
+        				<br/ id="clearboth">
             </section>
 
             <section id="playAgain">
                 <form action="testForm/push.php" method="post" id="explanation">
-                    Difficulty: <input type="hidden" name="difficulty" id="diff"><a id="diffdisplay"></a>
+                    <div class="submitForm">Difficulty:</div>&nbsp;<input type="hidden" name="difficulty" id="diff"><a id="diffdisplay"></a>
                     <br>
-                    Time Taken: <input type="hidden" name="time" id="time"><a id="timedisplay"></a>
+                    <div class="submitForm">Time Taken:</div>&nbsp;<input type="hidden" name="time" id="time"><a id="timedisplay"></a>
                     <br>
-                    Score: <input type="hidden" name="score" id="hello"><a id="scoredisplay"></a>
+                    <div class="submitForm">Score:</div>&nbsp;<input type="hidden" name="score" id="hello"><a id="scoredisplay"></a>
                     <br>
-                    Name: <input type="text" name="handle" maxlength="20" required>
+                    <div class="submitForm">Name:</div>&nbsp;<input type="text" name="handle" maxlength="20" required>
                     <br>
-                    <button> Submit </button>
+                    <input type="submit" id="submit">
                 </form>
                 <script type="text/javascript">
-                    var gg = 50;
-                    document.getElementById("hello").value = gg;
+                    document.getElementById("hello").value = 50;
                     document.getElementById("diff").value = 'easy';
                     document.getElementById("time").value = 100;
                     document.getElementById("diffdisplay").innerHTML = 'easy';
                     document.getElementById("timedisplay").innerHTML = 100;
-                    document.getElementById("scoredisplay").innerHTML = gg;
+                    document.getElementById("scoredisplay").innerHTML = 50;
                 </script>
                 <div class="endButton again">Play Again?</div>
             </section>
