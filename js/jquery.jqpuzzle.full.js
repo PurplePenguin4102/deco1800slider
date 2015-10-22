@@ -1021,6 +1021,14 @@ $.fn.jqPuzzle = function(settings, texts) {
 			window.clearInterval(homeshuffle)
 			});
 			
+			$('.navButton').click(function(){window.myVar = 0;
+			window.clearInterval(homeshuffle)
+			});
+			
+			$('.leaderButton').click(function(){window.myVar = 0;
+			window.clearInterval(homeshuffle)
+			});
+			
 			// toggle original on click
 			if(control.toggleOriginal) $originalButton.click(function() {
 				// do nothing, if disabled
@@ -1030,6 +1038,8 @@ $.fn.jqPuzzle = function(settings, texts) {
 				if(lock) return false;
 				
 				lock = true; // set lock
+				
+				
 				
 				if($originalButton.is('.jqp-toggle')) {
 					// re-enable other buttons

@@ -192,8 +192,15 @@ div.leaderButton:hover{
 	display: inline;
 	padding-left: 20px;
 	padding-right: 20px;
+	cursor: pointer;
 	
 }
+
+a{
+cursor: pointer !important;	
+}
+
+
 
 input{
 	background-color: #002f49;
