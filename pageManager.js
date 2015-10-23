@@ -41,6 +41,7 @@ function open_menu(){
 
 function open_leaderboard() {
     $(leaderboard).show('slow');
+    showScore('Easy');
     $(homepage).hide('slow');
     $(menu).hide('slow');
     $(difficulty).hide('slow');
@@ -65,6 +66,19 @@ function showScore(str) {
         }
         xmlhttp.open("GET","testForm/pull"+str+".php",true);
         xmlhttp.send();
+        if (str == 'Easy') {
+          document.getElementById("pullEasy").style.backgroundColor = "white";
+          document.getElementById("pullMedium").style.backgroundColor = "#c30d36";
+          document.getElementById("pullHard").style.backgroundColor = "#c30d36";
+        } else if (str == 'Medium') {
+          document.getElementById("pullEasy").style.backgroundColor = "#c30d36";
+          document.getElementById("pullMedium").style.backgroundColor = "white";
+          document.getElementById("pullHard").style.backgroundColor = "#c30d36";
+        } else {
+          document.getElementById("pullEasy").style.backgroundColor = "#c30d36";
+          document.getElementById("pullMedium").style.backgroundColor = "#c30d36";
+          document.getElementById("pullHard").style.backgroundColor = "white";
+        }
 }
 
 function open_difficutly() {

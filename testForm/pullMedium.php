@@ -1,4 +1,4 @@
-<table id="normal" class="center">
+<table id="tableMedium" class="center">
   <tr>
       <td><h3>Ranking</h3></td>
       <td><h3>Nickname</h3></td>
@@ -9,7 +9,7 @@
     $db = mysql_select_db("scores");
 
     $num = 1;
-    $query = mysql_query("SELECT Nickname, Score FROM score_data WHERE Difficulty='normal' ORDER BY Score DESC, Time ASC LIMIT 5");
+    $query = mysql_query("SELECT Nickname, Score FROM score_data WHERE Difficulty='medium' ORDER BY Score DESC, Time ASC LIMIT 5");
     while ($row = mysql_fetch_assoc($query)){
       echo "<tr>";
 

@@ -46,7 +46,7 @@ div.menuButton, div.endButton, div.difficultyButton, div.playButton{
     cursor: pointer;
 }
 
-div.hintButton, div.solveButton, #submit, .pullButton{
+div.hintButton, div.solveButton, #submit, #pullEasy, #pullMedium, #pullHard{
 	width: 150px;
     background-color: #c30d36;
     border-radius: 50px;
@@ -100,8 +100,18 @@ div.hintButton, div.solveButton, #submit, .pullButton{
 }
 
 #pull  {
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#pullEasy, #pullMedium, #pullHard {
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#txtHint {
+  margin-bottom: 40px;
 }
 
 #puzzle {
@@ -215,7 +225,7 @@ div.leaderButton:hover{
 }
 
 a{
-cursor: pointer !important;	
+cursor: pointer !important;
 }
 
 
